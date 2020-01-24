@@ -1,4 +1,4 @@
-# A bit of cutomization for the termux Bourne Again Shell, and some easy binaries.sh
+# A bit of cutomization for the termux Bourne Again Shell(BASH), and some easy binaries.sh
 
 ## bash.bashrc
 This here is a little modification to the bash.bashrc file in the /usr/etc/bash.bashrc. Enjoy tweaking with these c:
