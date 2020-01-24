@@ -6,6 +6,7 @@ Replace or copy the contents to your usr/etc/bash.bashrc
 
 ## binaries.sh
 These simple shell scripts might just make working a lot easier.
+Copy these to usr/bin and dont forget to chmod u+x
 
 
   ## Here's a screenshot
