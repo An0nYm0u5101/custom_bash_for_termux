@@ -4,7 +4,7 @@
 This here is a little modification to the bash.bashrc file in the /usr/etc/bash.bashrc. Enjoy tweaking with these c:
 Replace or copy the contents to your usr/etc/bash.bashrc 
 
-##binaries.sh
+## binaries.sh
 These simple shell scripts might just make working a lot easier.
 
 
