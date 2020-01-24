@@ -10,4 +10,4 @@ These simple shell scripts might just make working a lot easier.
 
   ## Here's a screenshot
 
-                         ![screenshot](Screenshot_2020-01-24-16-51-52.png)
+   ![screenshot](Screenshot_2020-01-24-16-51-52.png)
