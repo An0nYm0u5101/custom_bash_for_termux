@@ -3,11 +3,8 @@ if [ -x /data/data/com.termux/files/usr/libexec/termux/command-not-found ]; then
 		/data/data/com.termux/files/usr/libexec/termux/command-not-found "$1"
 	}
 fi
-#This is for a solarized background
 echo -ne '\e]11;#002b36\e\\'
-#And this is for an I beam cursor
 printf '\033[6 q'
-#Figured that good old ps1 is okay
 PS1='$ '
 
 alias sl="ls --color"
@@ -48,3 +45,6 @@ LS_COLORS=$LS_COLORS:'*.zip=01;35:' export LS_COLORS
 LS_COLORS=$LS_COLORS:'*.txt=01:' export LS_COLORS
 alias cla="clear"
 alias la="ls -F --color"
+alias lz="ls -F --color"
+alias duck="w3m https://duckduckgo.com"
+alias gog='w3m "https://www.google.com/?gl=us&hl=en&pws=0&gws_rd=cr"'
