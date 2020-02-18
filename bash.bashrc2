@@ -1,10 +1,15 @@
+#This is the prompt I am using at the moment
+
 if [ -x /data/data/com.termux/files/usr/libexec/termux/command-not-found ]; then
 	command_not_found_handle() {
 		/data/data/com.termux/files/usr/libexec/termux/command-not-found "$1"
 	}
 fi
 
-PS1='\e[01;37m┌──<<|[\w]|\n└─╼>>\e[m '
+#This is for changing the cursor from block to i-beam
+printf '\033[6 q'
+
+PS1='$ '
 
 alias sl="ls --color"
 alias ls="ls --color"
@@ -22,11 +27,13 @@ alias yoshare="cd $HOME; cd ..; cd usr/share"
 alias yousr="cd $HOME; cd ..; cd usr/"
 alias yolibx=" cd $HOME; cd ..; cd usr/libexec/"
 tobin="/data/data/com.termux/files/usr/bin"
+toetc="/data/data/com.termux/files/usr/etc"
 alias grep="grep --color"
 LS_COLORS=$LS_COLORS:'di=01;02;36:';
 export LS_COLORS
 LS_COLORS=$LS_COLORS:'ex=01;02;32:';
 export LS_COLORS
+LS_COLORS=$LS_COLORS:'*.py=01;02;32:'; export LS_COLORS
 LS_COLORS=$LS_COLORS:'ln=34:';
 export LS_COLORS
 LS_COLORS=$LS_COLORS:'no=01;02;97:';
@@ -38,4 +45,7 @@ LS_COLORS=$LS_COLORS:'*.pcap=01;31:' export LS_COLORS
 LS_COLORS=$LS_COLORS:'*.cap=01;31:' export LS_COLORS
 LS_COLORS=$LS_COLORS:'*.conf=01;33:' export LS_COLORS
 LS_COLORS=$LS_COLORS:'*.md=01:' export LS_COLORS
+LS_COLORS=$LS_COLORS:'*.zip=01;35:' export LS_COLORS
 LS_COLORS=$LS_COLORS:'*.txt=01:' export LS_COLORS
+alias cla="clear"
+alias la="ls -F --color"
