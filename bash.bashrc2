@@ -3,11 +3,35 @@ if [ -x /data/data/com.termux/files/usr/libexec/termux/command-not-found ]; then
 		/data/data/com.termux/files/usr/libexec/termux/command-not-found "$1"
 	}
 fi
+
+#    _  _     _                     _
+#  _| || |_  | |__     __ _   ___  | |__    _ __    ___
+# |_  ..  _| | '_ \   / _` | / __| | '_ \  | '__|  / __|
+# |_      _| | |_) | | (_| | \__ \ | | | | | |    | (__
+#   |_||_|   |_.__/   \__,_| |___/ |_| |_| |_|     \___|
+#
+
+# My vi key bindings
+set -o vi
+bind -m vi-command ".":insert-last-argument
+bind -m vi-insert "\C-l":clear-screen
+bind -m vi-insert "\C-a":beginning-of-line
+bind -m vi-insert "\C-e":end-of-line
+bind -m vi-insert "\C-w":backward-kill-word
+bind 'set show-all-if-ambiguous on'
+bind 'TAB:menu-complete'
+bind '"\e[A": history-search-backward'
+bind '"\eOA": history-search-backward'
+#Color changes in terminal background and font
 echo -ne '\e]10;#d5c4a1\e\\'
 echo -ne '\e]11;#1d2021\e\\'
+#Changes the cursor from block to I-beam
 printf '\033[6 q'
+
 PS1='$ '
 
+#My aliases
+alias open="termux-open"
 alias sl="ls --color"
 alias ls="ls --color"
 alias cls="clear"
@@ -23,9 +47,11 @@ alias yo-lib="cd $HOME; cd ..; cd usr/lib/"
 alias yoshare="cd $HOME; cd ..; cd usr/share"
 alias yousr="cd $HOME; cd ..; cd usr/"
 alias yolibx=" cd $HOME; cd ..; cd usr/libexec/"
+# Custom variables
 tobin="/data/data/com.termux/files/usr/bin"
 toetc="/data/data/com.termux/files/usr/etc"
 alias grep="grep --color"
+#Custom dircolors
 LS_COLORS=$LS_COLORS:'di=01:';
 export LS_COLORS
 LS_COLORS=$LS_COLORS:'ex=01;02;32:';
@@ -47,8 +73,13 @@ LS_COLORS=$LS_COLORS:'*.zip=01;35:' export LS_COLORS
 LS_COLORS=$LS_COLORS:'*.txt=01;37:' export LS_COLORS
 LS_COLORS=$LS_COLORS:'*.md=01;37:' export LS_COLORS
 LS_COLORS=$LS_COLORS:'*.vim=02;36:' export LS_COLORS
+
+# Again some aliases
 alias cla="clear"
-alias la="ls -F --color"
+alias la="ls -a -F --color"
 alias lz="ls -F --color"
 alias duck="w3m https://duckduckgo.com"
 alias gog='w3m "https://www.google.com/?gl=us&hl=en&pws=0&gws_rd=cr"'
+
+# A simple cs function. cd to dir and list contents
+cs() { cd "$@" && ls; }
