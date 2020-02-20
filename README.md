@@ -12,7 +12,7 @@ These simple shell scripts might just make working a lot easier.
 Copy these to usr/bin and dont forget to chmod u+x
 
 ## dotfiles
-The dotfiles contain sone config files for my tmux, vim and the key bindings I'm using for my bash atm. 
+The dotfiles contain some config files for my tmux, vim and the key bindings I'm using for my bash atm. 
 
   ## Here's a screenshot to bash.bashrc
 
