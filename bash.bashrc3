@@ -23,17 +23,15 @@ bind -m vi-insert "\C-w":backward-kill-word
 bind '"\e[A": history-search-backward'
 bind '"\eOA": history-search-backward'
 
-#Color changes in terminal background and font
-echo -ne '\e]10;#d5c4a1\e\\'
-echo -ne '\e]11;#1c1c1c\e\\'
+#Color changes in terminal foreground and background
+echo -ne '\e]10;#a4c3c3\e\\'
+echo -ne '\e]11;#10101c\e\\'
 
 #Changes the cursor from block to I-beam
 printf '\033[6 q'
-
-PS1='$ '
-
-#PS1="\[\033[1;1m\][\w] \n\[\033[2;36m\]$ \[\033[0m\]"
-
+#
+PS1="\[\033[1;38;5;208m\][\w] \n\[\033[2;38;5;111m\]$ \[\033[0m\]"
+#
 #My aliases
 alias open="termux-open"
 alias sl="ls --color"
