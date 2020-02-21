@@ -7,6 +7,9 @@ Replace or copy the contents to your usr/etc/bash.bashrc
 ## bash.bashrc2
 This bash.bashrc2 is what my bash.bashrc looks like. It's inspired by gruvbox.vim theme from vim editor.Added couple of modifications like changing the default cursor to I-beam and tons of aliases. 
 
+## bash.bashrc3
+Yet another update, custom prompts and perhaps a solarized version of my own
+
 ## binaries.sh
 These simple shell scripts might just make working a lot easier.
 Copy these to usr/bin and dont forget to chmod u+x

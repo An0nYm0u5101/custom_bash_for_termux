@@ -24,13 +24,13 @@ bind '"\e[A": history-search-backward'
 bind '"\eOA": history-search-backward'
 
 #Color changes in terminal foreground and background
-echo -ne '\e]10;#a4c3c3\e\\'
+echo -ne '\e]10;#87afaf\e\\'
 echo -ne '\e]11;#10101c\e\\'
 
 #Changes the cursor from block to I-beam
 printf '\033[6 q'
 #
-PS1="\[\033[1;38;5;208m\][\w] \n\[\033[2;38;5;111m\]$ \[\033[0m\]"
+PS1="\[\033[1;38;5;111m\][\w] \n\[\033[2;38;5;111m\]$ \[\033[0m\]"
 #
 #My aliases
 alias open="termux-open"
@@ -59,16 +59,16 @@ tovic="/data/data/com.termux/files/usr/share/vim/vim81/colors"
 alias grep="grep --color"
 
 #Custom dircolors
-LS_COLORS=$LS_COLORS:'di=01:';
+LS_COLORS=$LS_COLORS:'di=01;02;38;5;36:';
 export LS_COLORS
-LS_COLORS=$LS_COLORS:'ex=02;32:';
+LS_COLORS=$LS_COLORS:'ex=01;02;38;5;196:';
 export LS_COLORS
-LS_COLORS=$LS_COLORS:'*.py=02;32:'; export LS_COLORS
+LS_COLORS=$LS_COLORS:'*.py=01;02;38;5;202:'; export LS_COLORS
 LS_COLORS=$LS_COLORS:'ln=02;34:';
 export LS_COLORS
-LS_COLORS=$LS_COLORS:'no=02;37:';
+LS_COLORS=$LS_COLORS:'no=37:';
 export LS_COLORS
-LS_COLORS=$LS_COLORS:'*.html=02;33:'; export LS_COLORS
+LS_COLORS=$LS_COLORS:'*.html=01;02;38;5;208:'; export LS_COLORS
 LS_COLORS=$LS_COLORS:'*.bin=96:';
 export LS_COLORS
 LS_COLORS=$LS_COLORS:'*.h=01;90:'; export LS_COLORS
