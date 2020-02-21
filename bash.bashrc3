@@ -63,7 +63,7 @@ LS_COLORS=$LS_COLORS:'di=01;02;38;5;36:';
 export LS_COLORS
 LS_COLORS=$LS_COLORS:'ex=01;02;38;5;196:';
 export LS_COLORS
-LS_COLORS=$LS_COLORS:'*.py=01;02;38;5;202:'; export LS_COLORS
+LS_COLORS=$LS_COLORS:'*.py=01;02;38;5;111:'; export LS_COLORS
 LS_COLORS=$LS_COLORS:'ln=02;34:';
 export LS_COLORS
 LS_COLORS=$LS_COLORS:'no=37:';
@@ -79,7 +79,7 @@ LS_COLORS=$LS_COLORS:'*.md=01:' export LS_COLORS
 LS_COLORS=$LS_COLORS:'*.zip=01;35:' export LS_COLORS
 LS_COLORS=$LS_COLORS:'*.txt=01;37:' export LS_COLORS
 LS_COLORS=$LS_COLORS:'*.md=01;37:' export LS_COLORS
-LS_COLORS=$LS_COLORS:'*.vim=02;36:' export LS_COLORS
+LS_COLORS=$LS_COLORS:'*.vim=01;02;36:' export LS_COLORS
 
 # Again some aliases
 alias cla="clear"
