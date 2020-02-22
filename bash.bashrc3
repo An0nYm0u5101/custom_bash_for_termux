@@ -11,6 +11,12 @@ fi
 #   |_||_|   |_.__/   \__,_| |___/ |_| |_| |_|     \___|
 #
 
+#just type in a directory name and it'll auto cd to that $dir
+shopt -s autocd
+
+#I used autojump plugin, check that out on github
+[[ -s /data/data/com.termux/files/home/.autojump/etc/profile.d/autojump.sh ]] && source /data/data/com.termux/files/home/.autojump/etc/profile.d/autojump.sh 
+
 # My vi key bindings
 set -o vi
 bind -m vi-command ".":insert-last-argument
