@@ -28,8 +28,8 @@ bind '"\e[A": history-search-backward'
 bind '"\eOA": history-search-backward'
 
 #Color changes in terminal foreground and background
-echo -ne '\e]10;#87afaf\e\\'
-echo -ne '\e]11;#10101c\e\\'
+# echo -ne '\e]10;#87afaf\e\\'
+# echo -ne '\e]11;#10101c\e\\'
 
 #Changes the cursor from block to I-beam
 printf '\033[6 q'
