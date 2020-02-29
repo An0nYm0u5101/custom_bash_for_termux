@@ -11,10 +11,8 @@ fi
 #   |_||_|   |_.__/   \__,_| |___/ |_| |_| |_|     \___|
 #
 
-#just type in a directory name and it'll auto cd to that $dir
-shopt -s autocd
+#shopt -s autocd
 
-#I used autojump plugin, check that out on github
 [[ -s /data/data/com.termux/files/home/.autojump/etc/profile.d/autojump.sh ]] && source /data/data/com.termux/files/home/.autojump/etc/profile.d/autojump.sh 
 
 # My vi key bindings
@@ -61,7 +59,7 @@ tobin="/data/data/com.termux/files/usr/bin"
 toetc="/data/data/com.termux/files/usr/etc"
 toshare="/data/data/com.termux/files/usr/share"
 tousr="/data/data/com.termux/files/usr/"
-tovic="/data/data/com.termux/files/usr/share/vim/vim81/colors"
+tovim="/data/data/com.termux/files/usr/share/vim/vim81/colors"
 alias grep="grep --color"
 
 #Custom dircolors
@@ -86,6 +84,11 @@ LS_COLORS=$LS_COLORS:'*.zip=01;35:' export LS_COLORS
 LS_COLORS=$LS_COLORS:'*.txt=01;37:' export LS_COLORS
 LS_COLORS=$LS_COLORS:'*.md=01;37:' export LS_COLORS
 LS_COLORS=$LS_COLORS:'*.vim=01;02;36:' export LS_COLORS
+LS_COLORS=$LS_COLORS:'*.jpeg=01;02;38;5;220:'; export LS_COLORS
+LS_COLORS=$LS_COLORS:'*.jpg=01;02;38;5;220:'; export LS_COLORS
+LS_COLORS=$LS_COLORS:'*.png=01;02;38;5;220:'; export LS_COLORS
+LS_COLORS=$LS_COLORS:'*.gif=01;02;38;5;220:'; export LS_COLORS
+LS_COLORS=$LS_COLORS:'*.pdf=01;02;38;5;210:'; export LS_COLORS
 
 # Again some aliases
 alias cla="clear"
