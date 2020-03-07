@@ -1,0 +1,4 @@
+git add --all
+echo "commit: "
+read commm
+git commit -m "$commm"; git push -u origin master
