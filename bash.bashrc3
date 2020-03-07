@@ -34,16 +34,20 @@ bind '"\eOA": history-search-backward'
 #Changes the cursor from block to I-beam
 printf '\033[6 q'
 #
-PS1="\[\033[1;38;5;111m\][\w] \n\[\033[2;38;5;111m\]$ \[\033[0m\]"
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+#
+PS1="\[\033[1;38;5;111m\][\w] \[\e[01;38;5;131m\]\$(parse_git_branch)\n\[\033[2;38;5;111m\]$ \[\033[0m\]"
 #
 #My aliases
 alias open="termux-open"
-alias sl="ls --color"
+alias sl="ls --color -Ft"
 alias ls="ls --color"
 alias cls="clear"
 alias ..="cd .."
 alias ...="cd ../.."
-alias ls="ls --color -F"
+alias ls="ls --color -Ft"
 alias hist="history -c"
 alias yoetc="cd $HOME; cd ..; cd usr/etc/"
 alias yobin="cd $HOME; cd ..; cd usr/bin/"
@@ -72,7 +76,7 @@ LS_COLORS=$LS_COLORS:'ln=02;34:';
 export LS_COLORS
 LS_COLORS=$LS_COLORS:'no=37:';
 export LS_COLORS
-LS_COLORS=$LS_COLORS:'*.html=01;02;38;5;208:'; export LS_COLORS
+LS_COLORS=$LS_COLORS:'*.html=01;02;38;5;209:'; export LS_COLORS
 LS_COLORS=$LS_COLORS:'*.bin=96:';
 export LS_COLORS
 LS_COLORS=$LS_COLORS:'*.h=01;90:'; export LS_COLORS
@@ -80,7 +84,7 @@ LS_COLORS=$LS_COLORS:'*.pcap=01;31:' export LS_COLORS
 LS_COLORS=$LS_COLORS:'*.cap=01;31:' export LS_COLORS
 LS_COLORS=$LS_COLORS:'*.conf=01;33:' export LS_COLORS
 LS_COLORS=$LS_COLORS:'*.md=01:' export LS_COLORS
-LS_COLORS=$LS_COLORS:'*.zip=01;35:' export LS_COLORS
+LS_COLORS=$LS_COLORS:'*.zip=01;38;5;162:' export LS_COLORS
 LS_COLORS=$LS_COLORS:'*.txt=01;37:' export LS_COLORS
 LS_COLORS=$LS_COLORS:'*.md=01;37:' export LS_COLORS
 LS_COLORS=$LS_COLORS:'*.vim=01;02;36:' export LS_COLORS
@@ -88,12 +92,12 @@ LS_COLORS=$LS_COLORS:'*.jpeg=01;02;38;5;220:'; export LS_COLORS
 LS_COLORS=$LS_COLORS:'*.jpg=01;02;38;5;220:'; export LS_COLORS
 LS_COLORS=$LS_COLORS:'*.png=01;02;38;5;220:'; export LS_COLORS
 LS_COLORS=$LS_COLORS:'*.gif=01;02;38;5;220:'; export LS_COLORS
-LS_COLORS=$LS_COLORS:'*.pdf=01;02;38;5;210:'; export LS_COLORS
+LS_COLORS=$LS_COLORS:'*.pdf=01;02;38;5;173:'; export LS_COLORS
 
 # Again some aliases
 alias cla="clear"
-alias la="ls -a -F --color"
-alias lz="ls -F --color"
+alias la="ls -a -Ft --color"
+alias lz="ls -Ft --color"
 alias duck="w3m https://duckduckgo.com"
 alias gog='w3m "https://www.google.com/?gl=us&hl=en&pws=0&gws_rd=cr"'
 
