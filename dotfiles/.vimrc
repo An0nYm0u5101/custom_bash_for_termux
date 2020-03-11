@@ -5,3 +5,5 @@ filetype plugin indent on
 set hlsearch
 let NERDTreeShowHidden=1
 :nnoremap <C-n> :NERDTreeToggle<CR>
+colorscheme camo
+colorscheme iceberg
